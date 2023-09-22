@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatClient.MainPage">
+
+    <ScrollView>
+        <HorizontalStackLayout>
+
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            >
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="End">
+                    <Label
+                    x:Name="locationLabel"
+                    Text="Server Name/Address"
+                    FontSize="14"
+                    />
+                    <Entry x:Name= "locationEntry"
+                           HorizontalTextAlignment="Start"
+                           WidthRequest="130"
+                           BackgroundColor="White"
+                           TextColor="Black"/>
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="End">
+                    <Label
+                    x:Name="nameLabel"
+                    Text="Your Name"
+                    FontSize="14"
+                    />
+                    <Entry x:Name="nameEntry" HorizontalTextAlignment="Start" WidthRequest="130" BackgroundColor="White" TextColor="Black"/>
+
+                </HorizontalStackLayout>
+
+                <Button
+                    x:Name="serverConnectionButton"
+                    Text="Connect To Server"
+                    HorizontalOptions="End" 
+                    />
+
+
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                    <Label
+                    x:Name="entryLabel "
+                    Text="Type Something"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="14"
+                    HorizontalOptions="Center" />
+                    <Entry x:Name="entryEntry" HorizontalTextAlignment="Start" WidthRequest="450"
+                           BackgroundColor="White" TextColor="Black"/>
+
+                </HorizontalStackLayout>
+
+                <ScrollView HeightRequest="350" WidthRequest="550" BackgroundColor="White" HorizontalOptions="End">
+                    <Label
+                    x:Name="chatLog"
+                    FontSize="14"
+                    BackgroundColor="White"
+                    TextColor="Black" />
+                </ScrollView>
+
+
+            </VerticalStackLayout>
+            <VerticalStackLayout            
+            Spacing="25"
+            Padding="30,0">
+
+                <Label x:Name="participantLabel"  
+                       HeightRequest="300"
+                       WidthRequest="250"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       HorizontalOptions="Center"/>
+                <Button
+                x:Name="participantButton"
+                Text="Retrieve Participants"
+                HorizontalOptions="Center" 
+                />
+
+
+
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </ScrollView>
+
+</ContentPage>

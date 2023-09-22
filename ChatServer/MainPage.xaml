@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatServer.MainPage">
+
+    <ScrollView>
+        <HorizontalStackLayout>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0">
+
+                <Label
+                Text="Participants:"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+                <Label x:Name="participantLabel"  
+                       HeightRequest="300" WidthRequest="250" BackgroundColor="white" TextColor="Black"  HorizontalOptions="Center"/>
+
+                <Button
+                x:Name="StartServerBtn"
+                Text="Start Server"
+                HorizontalOptions="Center" />
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Spacing="15">
+                <HorizontalStackLayout Spacing="15">
+                    <VerticalStackLayout Spacing="25">
+                        <Label
+                        Text="Server Name:"
+                        FontSize="18"
+                        HorizontalOptions="Start" />
+
+                        <Label
+                        Text="Server IP Address:"
+                        FontSize="18"
+                        HorizontalOptions="Start" />
+
+                    </VerticalStackLayout>
+
+                    <VerticalStackLayout Spacing="10">
+                        <Entry x:Name="nameEntry" 
+                            HorizontalTextAlignment="Start" HeightRequest="1" WidthRequest="400"
+                           BackgroundColor="White" TextColor="Black"/>
+
+                        <Entry x:Name="IPEntry"  
+                            HorizontalTextAlignment="Start" HeightRequest="10" WidthRequest="400"
+                           BackgroundColor="White" TextColor="Black"/>
+
+                    </VerticalStackLayout>
+
+                </HorizontalStackLayout>
+
+                <ScrollView HeightRequest="350" WidthRequest="550" BackgroundColor="White" HorizontalOptions="End">
+                    <Label x:Name="chatLog"
+                           BackgroundColor="White"
+                           TextColor="Black"/>
+                </ScrollView>
+
+
+            </VerticalStackLayout>
+
+        </HorizontalStackLayout>
+    </ScrollView>
+
+</ContentPage>
